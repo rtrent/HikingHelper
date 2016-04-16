@@ -1,0 +1,237 @@
+/* mobile first */
+
+html, body {
+	height: 100%;
+}
+
+@font-face {
+	font-family:"leagueSpartan";
+	src:url("LeagueSpartan-Bold.otf");
+}
+
+.league-spartan {
+	font-family: "leagueSpartan", sans-serif;
+}
+
+.hh-light-green {
+	color: #4AB648;
+}
+
+.hh-green {
+	color: #357F3D;
+}
+
+.highlight {
+	/*background-color: rgba(253, 210, 169, .7);*/
+}
+
+section {
+	padding: 25px;
+}
+
+
+.hero {
+	min-height: 100%;
+	text-align: center;
+	background-image: url('../img/hiker-background-3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: -550px;
+	color: white;
+}
+.nav {
+	font-family: "leagueSpartan", sans-serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+
+.nav-button a {
+	text-decoration: none;
+}
+
+.hero .mission {
+	font-size: 40px;
+	padding-top: 0px;
+	font-weight: bold;
+}
+
+.hero .tagline {
+
+	font-size: 24px;
+}
+
+.hero .instructions {
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+.call-to-action {
+	text-align: center;
+	font-size: 18px;
+}
+
+.call-to-action hr {
+	margin: 10px;
+}
+
+.signup-form {
+	background-color: rgba(0,0,0,.7);
+	max-width: 640px;
+	/*width: 100%;*/
+	margin: 40px auto;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.submit {
+	text-align: center;
+}
+
+.submit > button {
+	font-family: "leagueSpartan", serif;
+	font-size: 14px;
+	margin: 0 auto;
+	background-color: rgba(253, 210, 169, 1);
+}
+
+.submit > button:active {
+	margin: 0 auto;
+	background-color: rgba(253, 210, 169, 1);
+}
+.question {
+	font-weight: bold;
+	text-align: center;
+}
+.field {
+	text-align: center;
+	color: #000000;
+}
+
+.how {
+	min-height: 250px;
+	background-color: #FDD2A9;
+	text-align: center;
+}
+
+.how .title {
+	font-weight: bold;
+	font-size: 28px;
+	/*font-weight: bold;*/
+}
+
+.how .number {
+	margin: 40px auto 0px auto;
+	display: block;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	-moz-border-radius: 50%; /* or 50% */
+	border-radius: 50%; /* or 50% */
+	border: 2px solid black;
+	font-size: 25px;
+}
+
+.how .header {
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+.about {
+	min-height: 250px;
+}
+
+.blurb {
+	margin: 0 auto;
+	/*font-family: Montserrat, serif;*/
+	font-size: 20px;
+	text-align: justify;
+}
+
+.footer {
+	background-color: #ABADAF;
+	min-height: 100px;
+	text-align: center;
+}
+
+.links {
+	padding: 15px;
+	margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+
+	.hero {
+		background-position-x: 0px;
+	}
+
+}
+
+@media (min-width: 750px) {
+	.hero {
+		background-position-x: 0px;
+	}
+
+	.nav {
+		font-size: 48px;
+	}
+	.nav-button a:hover {
+		color: #4AB648;
+	}
+
+	.hero .mission{
+		font-size: 84px;
+	}
+
+	.hero .tagline {
+		font-size: 36px;
+	}
+
+	.hero .instructions {
+		font-size: 24px;
+		margin-top: 100px;
+	}
+
+	.call-to-action {
+		text-align: center;
+		font-size: 24px;
+	}
+
+	.call-to-action hr {
+		margin: 10px;
+	}
+
+	.signup {
+		/*min-height: 600px;*/
+	}
+
+	.question {
+		text-align: right;
+	}
+	.field {
+		text-align: left;
+	}
+
+	.about {
+		min-height: 500px;
+	}
+
+	.blurb {
+		max-width: 640px;
+		margin: 0 auto;
+		padding-top: 55px;
+		/*font-family: Montserrat, serif;*/
+		font-size: 24px;
+	}
+
+	.footer {
+		background-color: #ABADAF;
+		min-height: 100px;
+	}
+
+	.links {
+		padding: 50px;
+		margin: 0 auto;
+	}
+}
+
