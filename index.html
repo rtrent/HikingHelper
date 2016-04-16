@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJhq8KQLT507DNM79NVhmAi7Wh6K5xKDI&libraries=places"></script>
+
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<title>Hiking Helper</title>
+</head>
+
+<body>
+	<!-- <div class="container"> -->
+
+		<section class="hero">
+			<section class="nav">
+				<div class="row text">
+					<div class="twelve columns logo">
+						<span class="hh-light-green">hiking</span><span class="hh-green">helper</span>
+					</div>
+				</div>
+			</section>
+			<div class="row">
+				<div class="twelve columns">
+					<div class="mission">
+						<span class="highlight">Become an adventurer</span>
+					</div>
+					<div class="tagline">
+						<span class="highlight">Hiking Helper creates custom hiking plans for you.</span>
+					</div>
+				</div>
+			</div>
+			<div class="signup">
+			
+				<form id="signup-form" class="signup-form" method="post">
+					<div class="row">
+						<div class="twelve columns call-to-action">
+							Start planning your hike!
+							<hr />
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>What's your name?*</p>
+						</div>
+						<div class="six columns field">
+							<input id="name-input" class="form-inputs" type="text" name="Name" placeholder="Name" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>What's your email address?*</p>
+						</div>
+						<div class="six columns field">
+							<input id="email-input" class="form-inputs"  type="email" name="Email" placeholder="Email" required>
+							<div id="email-error" style="display:none">Please enter your email in 'this@site.com' format</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>Where do you live?*</p>
+						</div>
+						<div class="six columns field">
+							<input id="location-input" class="form-inputs"  type="text" min="0" max="24" name="location" placeholder="Location" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>How many hours are you willing to drive?</p>
+						</div>
+						<div class="six columns field">
+							<input id="distance-input" type="number" class="form-inputs" name="Travel Length" placeholder="Hours">
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>How much time do you have to spend?</p>
+						</div>
+						<div class="six columns field">
+							<select id="time-input" class="form-inputs hikeDuration" name="Hike Length">
+								<option value="half-day">half a day</option>
+								<option value="whole-day" selected>a whole day</option>
+								<option value="weekend">weekend</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>How intense of a hike are you looking for?</p>
+						</div>
+						<div class="six columns field">
+							<select id="length-input" class="form-inputs intensity" name="Hike Intensity">
+								<option value="easy">easy</option>
+								<option value="moderate">moderate</option>
+								<option value="hard">hard</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns question">
+							<p>What are you hiking for?</p>
+						</div>
+						<div class="six columns field" style="color: white;">
+							<input type="checkbox" name="purpose1" value="photos"> I'm going for the views or to take photos</input>
+							<br />
+							<input type="checkbox" name="purpose2" value="workout"> I'm trying to get a workout</input>
+							<br />
+							<input type="checkbox" name="purpose3" value="nature"> I'm exploring nature</input>
+							<br />
+							<input type="checkbox" name="purpose4" value="family-friends"> I'm spending time with family / friends</input>
+							<br />
+							<input type="checkbox" name="purpose5" value="date"> I'm planning a date</input>
+							<br />
+							<input type="checkbox" name="purpose5" value="pet"> I'm taking my dog / pet</input>
+							<br />
+						</div>
+					</div>
+					<div class="row">
+						<div class="twelve columns submit">
+							<button type="submit">Go!</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</section>
+
+		<section class="how">
+			<div class="row">
+				<div class="twelve columns title">
+					How it works
+				</div>
+			</div>
+			<div class="row">
+				<div class="four columns stepOne">
+					<div class="number">1</div>
+					<div class="header">Sign up to meet your helper</div>
+					<div class="followup"></div>
+				</div>
+				<div class="four columns stepTwo">
+					<div class="number">2</div>
+					<div class="header">Find and prepare for your first hike together</div>
+					<div class="followup"></div>
+				</div>
+				<div class="four columns stepThree">
+					<div class="number">3</div>
+					<div class="header">Provide feedback to adjust your upcoming hikes</div>
+					<div class="followup"></div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="blurb">
+				<div class="row">
+					<div class="twelve columns">
+						<p>Even if you enjoy spending time in nature, if you aren't familiar with the activities in your area,
+						planning a trip can be a hassle. There are lots of resources online to help you learn more, but that takes
+						more time than you have and it's hard to pick from all the options.</p>
+						<p>Hiking Helper is a small team,
+						but if you tell us a little about yourself and the kinds of activities you enjoy, we'll help you create a
+						custom itinerary for your activity.</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="footer">
+			<div class="links">
+				<div class="row">
+					<div class="twelve columns">
+<!-- 						<span class="league-spartan">
+							Back to top
+						</span> |
+						<span class="league-spartan">
+							Contact
+						</span> | -->
+						<span class="league-spartan">
+							<span class="hh-light-green">hiking</span><span class="hh-green">helper</span> ® <span class="league-spartan">2015
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>	
+	<!-- </div> -->
+</body>
